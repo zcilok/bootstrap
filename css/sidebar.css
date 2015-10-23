@@ -1,0 +1,87 @@
+a{
+    outline: none;
+}
+
+a:active{
+    outline: none;
+}
+
+#sideBar{
+    text-align:left;
+}
+
+
+#sideBar ul{
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+#sideBar li{
+    margin:0px 10px 3px 10px;
+    padding:2px;
+    list-style-type: square;
+    display:block;
+    width:130px;
+    color:#1b6d85;
+}
+
+#sideBar li a{
+    width:100%;
+}
+
+#sideBar li a:link,
+#sideBar li a:visited{
+    color:#1b6d85;
+    font-family:verdana;
+    font-size:100%;
+    text-decoration:none;
+    display:block;
+    margin:0px 0px 0px 0px;
+    padding:0px;
+    width:100%;
+}
+
+#sideBar li a:hover{
+    color:#FFFFFF;
+    text-decoration:underline;
+}
+
+#sideBar{
+    position: fixed;
+    width: auto;
+    height: auto;
+    top: 140px;
+    right:0px;
+    background-position:top left;
+    background-repeat:repeat-y;
+}
+
+#sideBarTab{
+    float:left;
+    height:170px;
+    width:40px;
+    font-size: large;
+    font-weight: bold;
+    border:solid 1px #A2A0A0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    background-color: #ECECEC;
+}
+
+#sideBar a{
+    text-decoration:none;
+}
+
+#sideBarContents{
+    float:left;
+    overflow:hidden !important;
+    width:150px;
+    min-height: 170px;
+    border: solid 1px #A2A0A0;
+    background-color: #ECECEC;
+}
+
+#sideBarContentsInner{
+    width:150px;
+}

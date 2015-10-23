@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <title>Research Template</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/sidebar.css" media="screen" />
+
+    <style>
+        .tx1 {
+            padding: 4px;
+            border-bottom: dashed ;
+            width: 80%;
+        }
+        h4{
+            border-bottom: solid;
+        }
+        .navbar {
+            width: 90%;
+        }
+    </style>
+  </head>
+  <body>
+
+  <div id="sideBar">
+
+      <a href="#" id="sideBarTab">P<br>r<br>o<br>j<br>e<br>c<br>t</a>
+
+      <div id="sideBarContents" style="display:none;">
+          <div id="sideBarContentsInner">
+              <ul>
+                  <li><a href="#trasdec">Trasdec</a></li>
+                  <li><a href="#t&e">Traffic and Event Impact Prediction</a></li>
+                  <li><a href="#catp">ContexAware Traffic Prediction</a></li>
+              </ul>
+
+          </div>
+      </div>
+
+  </div>
+
+  <div class="container">
+      <h1>IMSC RESEARCH</h1>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">projects<span class="sr-only"></span></a></li>
+                <li><a href="#">col1</a></li>
+                <li><a href="#">col2</a></li>
+            </ul>
+        </div>
+    </nav>
+
+      <div class="container">
+
+          <div class="tx1" id="trasdec">
+              <h4>TransDec: A BigData FrameWork for Transportation Decision Making</h4>
+
+                <img src="http://imsc.usc.edu/images/projects/introChart.png " class="img-thumbnail" width="50%">
+              <p class="pro_info">
+                  The latest developments in wireless technologies as well as the widespread usage of sensors have led to the recent prevalence of Intelligent Transportation Systems (ITS) for realistic and effective monitoring, decision-making, and management of the transportation systems. Considering the large size of the transportation data, variety of the data (different modality and resolutions), and frequent changes of the data, the integration, querying and analysis of such data for large-scale real-time systems are intrinsically challenging data management tasks.  In this project, we particularly address these fundamental data management challenges in effective management of dynamic and large-scale transportation data, and efficient processing of real-time and historical spatio-temporal queries on transportation systems.
+              </p>
+          </div>
+
+          <div class="tx1" id="t&e">
+              <h4>Traffic and Event Impact Prediction</h4>
+
+              <img src=" http://infolab.usc.edu/images/research/Ding_1.png" class="img-thumbnail" width="50%">
+              <p class="pro_info">
+                  In this research, we focused on traffic prediction problem via utilizing the traffic sensor dataset. Due to thorough sensor instrumentations of road network in Los Angeles as well as the vast availability of auxiliary commodity sensors from which traffic information can be derived (e.g., CCTV cameras, GPS devices), a large volume of real-time and historical traffic data at very high spatial and temporal resolutions have become available. Therefore, how to mine valuable information from these data has become a key topic in spatialtemporal data mining.	We have studied the traffic prediction problem for road segments. We utilized the spatiotemporal behaviors of rush hours and events to perform a more accurate prediction of both shortterm and long-term average speed on road-segments, even in the presence of infrequent events (e.g., accidents). By utilizing both the topology of road network and sensor dataset, we are able to overcome the sparsity of our sensor dataset and extend the prediction task to the whole road network. We have also addressed the problems related to the impact of traffic incidents. We proposes a set of methods to predict the dynamic evolution of the impact of incidents.
+              </p>
+          </div>
+
+          <div class="tx1" id="catp">
+              <h4>Context Aware Traffic Prediction </h4>
+
+              <img src="http://infolab.usc.edu/images/research/Ding_2.png " class="img-thumbnail" width="50%">
+              <p class="pro_info">
+                  One key challenge in traffic prediction is how much to rely on prediction models that are constructed using historical data in real-time traffic situations, which may differ from that of the historical data and change over time. To overcome this, we propose a novel online framework that could learn from the current traffic situation (context) in real-time and predict the future traffic by matching the current situation to the most effective prediction model trained using historical data. As real-time traffic arrives, the traffic context space is adaptively partitioned in order to efficiently estimate the effectiveness of each base predictor in different situation.
+              </p>
+          </div>
+
+          <footer class="footer" style=" width: 90%;    background-color: #DEDEDE;">
+              <p class="pull-right"><a href="#">bach to top</a></p>
+              <p>University of Southern California-- IMSC LAB</p>
+          </footer>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/readmore.js"></script>
+
+      <script>
+          $('.pro_info').readmore({
+              moreLink: '<a href="#">More information...</a>',
+              maxHeight: 100,
+              speed: 100
+          });
+      </script>
+      <script>
+          jQuery.noConflict();
+          jQuery(document).ready(function(){
+              jQuery(".tx1").mouseover(function(event) {
+                  console.log("test");
+                  var $target=jQuery(event.target);
+                  var $wi=jQuery(".tx1").width()-30;
+                  if (!$target.is('img')) {
+                  } else {
+                      console.log("gettarget");
+                      $target.width($wi);
+                      console.log($target.width());
+                  }
+              }).mouseout(function(event){
+                  var $wi=jQuery(".tx1").width();
+                  jQuery(' img ').width($wi*0.5);
+              });
+          });
+      </script>
+      <script type="text/javascript" src="js/prototype.js"></script>
+      <script type="text/javascript" src="js/effects.js"></script>
+      <script type="text/javascript" src="js/side-bar.js"></script>
+
+  </div>
+  </body>
+</html>
